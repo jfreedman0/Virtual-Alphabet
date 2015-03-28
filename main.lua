@@ -19,10 +19,10 @@ function onPoseEdge(pose, edge)
     if (edge == "on") then
         if (pose == "doubleTap") then
             onUnlock()
-        elseif (pose == "waveOut") then
-            onWaveOut()     
-        elseif (pose == "waveIn") then
-            onWaveIn()
+        -- elseif (pose == "waveOut") then
+        --     onWaveOut()     
+        -- elseif (pose == "waveIn") then
+        --     onWaveIn()
         elseif (pose == "fist") then
             onFist()
         elseif (pose == "fingersSpread") then
@@ -41,11 +41,11 @@ function onUnlock()
     end
 end
 
-function onWaveOut()  
-end
+-- function onWaveOut()  
+-- end
 
-function onWaveIn() 
-end
+-- function onWaveIn() 
+-- end
 
 function onFist()  
     myo.controlMouse(true)
