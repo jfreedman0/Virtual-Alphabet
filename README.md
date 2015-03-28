@@ -1,4 +1,4 @@
-# virtual-alphabet
+# Virtual Alphabet
 Spartahack project
 
 
