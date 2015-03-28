@@ -2,20 +2,24 @@ scriptId = 'com.thalmic.examples.letters'
 scriptTitle = "Letters"
 scriptDetailsUrl = ""
 
+check = false
+
 function onForegroundWindowChange(app, title)
-	myo.debug("onForegroundWindowChange: " .. app .. ", " .. title)
-	--if (title == ) then
-		return true
-	--else
-	--	return false
-	--end
+    myo.debug("onForegroundWindowChange: " .. app .. ", " .. title)
+    --if (title == ) then
+        return true
+    --else
+    --  return false
+    --end
 end
 
 function onPoseEdge(pose, edge)  
     myo.debug("onPoseEdge: " .. pose .. ": " .. edge)
 
     if (edge == "on") then
-        if (pose == "waveOut") then
+        if (pose == "doubleTap") then
+            onUnlock()
+        elseif (pose == "waveOut") then
             onWaveOut()     
         elseif (pose == "waveIn") then
             onWaveIn()
@@ -27,11 +31,20 @@ function onPoseEdge(pose, edge)
     end
 end
 
-function onWaveOut() 
-    myo.mouse(click) 
+function onUnlock()
+    if (check == false) then
+        myo.unlock("hold")
+        check = true
+    elseif (check == true) then
+        myo.lock("hold")
+        check = false
+    end
 end
 
-function onWaveIn()  
+function onWaveOut()  
+end
+
+function onWaveIn() 
 end
 
 function onFist()  
