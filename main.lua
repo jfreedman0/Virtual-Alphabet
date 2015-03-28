@@ -1,8 +1,9 @@
-scriptId = 'com.thalmic.examples.letters'
-scriptTitle = "Letters"
+scriptId = 'com.thalmic.examples.virtual-alphabet'
+scriptTitle = "Virtual ALphabet"
 scriptDetailsUrl = ""
 
-check = false
+unlockcheck = false
+movementcheck = false
 
 function onForegroundWindowChange(app, title)
     myo.debug("onForegroundWindowChange: " .. app .. ", " .. title)
@@ -19,38 +20,48 @@ function onPoseEdge(pose, edge)
     if (edge == "on") then
         if (pose == "doubleTap") then
             onUnlock()
-        -- elseif (pose == "waveOut") then
-        --     onWaveOut()     
-        -- elseif (pose == "waveIn") then
-        --     onWaveIn()
         elseif (pose == "fist") then
             onFist()
         elseif (pose == "fingersSpread") then
-            onFingersSpread()           
+            onFingersSpread()    
+        -- elseif (pose == "waveIn") then
+        --     onWaveIn()  
+        -- elseif (pose == "waveOut") then
+        --     onWaveOut()          
         end
     end
 end
 
+-- No vibrate because locking and unlocking already vibrate the myo
 function onUnlock()
-    if (check == false) then
+    if (unlockcheck == false) then
         myo.unlock("hold")
-        check = true
-    elseif (check == true) then
+        unlockcheck = true
+    elseif (unlockcheck == true) then
         myo.lock("hold")
-        check = false
+        unlockcheck = false
     end
 end
 
--- function onWaveOut()  
--- end
+function onFist()
+    if (movementcheck == false) then
+        myo.vibrate("short")
+        myo.vibrate("short")
+        myo.controlMouse(true)
+        movementcheck = true
+    elseif (movementcheck == true) then
+        myo.vibrate("short")
+        myo.controlMouse(false)
+        movementcheck = false
+    end  
+end
+
+function onFingersSpread()  
+    myo.mouse("left", "click")
+end  
 
 -- function onWaveIn() 
 -- end
 
-function onFist()  
-    myo.controlMouse(true)
-end
-
-function onFingersSpread()  
-    myo.controlMouse(false)
-end  
+-- function onWaveOut()  
+-- end
