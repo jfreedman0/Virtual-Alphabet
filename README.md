@@ -1,8 +1,6 @@
 # Virtual Alphabet
-Spartahack project
 
-
-Virtual Alphabet is a learning game made by Joe Freedman, Alex Lambert, and Noah Hirvela at Spartahack 2015 at Michigan State University. It combines the use of Gamemaker, Myo Armband, and Firebase API to save a local and global high score table. The best part about Virtual Alphabet is the fact that the user gets to have fun by playing the game and won't even realize they are learning at the same time!
+Virtual Alphabet is a learning game made by Joe Freedman, Alex Lambert, and Noah Hirvela at Spartahack 2015, a Hackathon at Michigan State University. It combines the use of Gamemaker, Myo Armband, and Firebase API to save a local and global high score table. The best part about Virtual Alphabet is the fact that the user gets to have fun by playing the game and won't even realize they are learning at the same time!
 
 To play:
 
