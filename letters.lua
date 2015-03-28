@@ -27,7 +27,8 @@ function onPoseEdge(pose, edge)
     end
 end
 
-function onWaveOut()  
+function onWaveOut() 
+    myo.mouse(click) 
 end
 
 function onWaveIn()  
