@@ -7,11 +7,7 @@ movementcheck = false
 
 function onForegroundWindowChange(app, title)
     myo.debug("onForegroundWindowChange: " .. app .. ", " .. title)
-    if (title == "VirtualAlphabet.exe, GameMaker: Studio") then
-        return true
-    else
-     return false
-    end
+    return true
 end
 
 function onPoseEdge(pose, edge)  
