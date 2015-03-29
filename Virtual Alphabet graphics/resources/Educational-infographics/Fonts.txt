@@ -1,0 +1,5 @@
+Fonts used in the design;
+
+Font: FFF Tusj,
+Author: Magnus Cederholm,
+Url: http://www.fontsquirrel.com/fonts/FFF-Tusj;

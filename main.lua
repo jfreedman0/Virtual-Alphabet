@@ -51,12 +51,15 @@ function onFist()
         movementcheck = true
     elseif (movementcheck == true) then
         myo.vibrate("short")
+        myo.vibrate("short")
+        myo.vibrate("short")
         myo.controlMouse(false)
         movementcheck = false
     end  
 end
 
-function onFingersSpread()  
+function onFingersSpread()
+    myo.vibrate("short") 
     myo.mouse("left", "click")
 end  
 
