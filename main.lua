@@ -1,5 +1,5 @@
 scriptId = 'com.thalmic.examples.virtual-alphabet'
-scriptTitle = "Virtual ALphabet"
+scriptTitle = "Virtual Alphabet"
 scriptDetailsUrl = ""
 
 unlockcheck = false
@@ -7,11 +7,11 @@ movementcheck = false
 
 function onForegroundWindowChange(app, title)
     myo.debug("onForegroundWindowChange: " .. app .. ", " .. title)
-    --if (title == ) then
+    if (title == "VirtualAlphabet.exe, GameMaker: Studio") then
         return true
-    --else
-    --  return false
-    --end
+    else
+     return false
+    end
 end
 
 function onPoseEdge(pose, edge)  
