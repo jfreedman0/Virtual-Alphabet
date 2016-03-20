@@ -1,9 +1,8 @@
 # Virtual Alphabet
-
 Virtual Alphabet is a learning game made by Joe Freedman, Alex Lambert, and Noah Hirvela at Spartahack 2015, a Hackathon at Michigan State University. It combines the use of Gamemaker and Myo Armband. There is local highscore table that requires no internet. The best part about Virtual Alphabet is the fact that the user gets to have fun by playing the game and won't even realize they are learning at the same time!
 
 To play:
-
+Press Q to quit
 1. Open Myo Connect
 2. Connect Myo through the Armband Manager
 2.5. It is recommended, though not required to custom calibrate the Myo armband to the user's gestures
